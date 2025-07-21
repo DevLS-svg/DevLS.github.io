@@ -9,7 +9,12 @@ const posts = [
   {
     title: "DevLS - A internet manual ainda respira!!",
     file: "posts/manual-web.html"
+  },
+  {
+    title: "A Evolução dos ataques web - DevLS 2025",
+    file: "posts/evolucao-ataques-web.html"
   }
+  
 ];
 
 function renderPosts() {
