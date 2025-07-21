@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contato DevLS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="cabecalho"></div>
+
+  <div class="terminal">
+    <h1>Contato DevLS 📮</h1>
+    <p>📧 <strong>Email:</strong> <a href="mailto:leto9509@gmail.com">leto9509@gmail.com</a></p>
+    <p>🔗 <strong>GitHub:</strong> <a href="https://github.com/DevLS-svg" target="_blank">github.com/DevLS-svg</a></p>
+
+    <p style="margin-top:1rem;">📡 Sinta-se livre pra enviar mensagens, sugerir projetos ou colaborar em iniciativas DevLS. Presença digital também é conexão.</p>
+  </div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("cabecalho").innerHTML = data;
+      });
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>

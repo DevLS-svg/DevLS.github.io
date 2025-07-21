@@ -1,0 +1,20 @@
+<!-- labs/user-agent-viewer.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Agent Viewer</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="terminal">
+    <h1>User Agent Viewer</h1>
+    <p><strong>Seu navegador:</strong></p>
+    <p id="ua">Detectando...</p>
+
+    <script>
+      document.getElementById("ua").textContent = navigator.userAgent;
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fingerprint.py: Auditoria Ética de Headers HTTP</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="terminal">
+    <h1>Fingerprint.py: Auditoria Ética de Headers HTTP</h1>
+
+    <p><strong>Fingerprint.py</strong> é uma ferramenta criada pela <strong>DevLS</strong> com foco em segurança da informação e <em>responsible disclosure</em>. Ela realiza análise ética de cabeçalhos HTTP e detecta práticas inseguras como ausência de HSTS, CSP, e X-Frame-Options.</p>
+
+    <h2>🧠 Funcionalidades</h2>
+    <ul>
+      <li>Coleta de headers HTTP via requisição padrão</li>
+      <li>Detecção automática de configurações inseguras</li>
+      <li>Geração de relatório técnico em Markdown (<code>fingerprint_report.md</code>)</li>
+      <li>Identificação de vetores passivos de ataque</li>
+    </ul>
+
+    <h2>📦 Requisitos</h2>
+    <pre>
+# Termux (Android)
+pkg install python
+
+# Windows ou Linux
+pip install requests
+    </pre>
+
+    <h2>🚀 Uso</h2>
+    <pre>
+python fingerprint_basic.py
+    </pre>
+    <p>Digite a URL alvo e aguarde a análise. O relatório será gerado com observações de segurança.</p>
+
+    <h2>⚔️ Exemplo de Saída</h2>
+    <pre>
+Servidor: Apache/2.4.29
+X-Powered-By: PHP/5.6
+⚠️ Sem HSTS — vulnerável a downgrade
+⚠️ Sem CSP — risco de XSS
+⚠️ Sem X-Frame-Options — sujeito a clickjacking
+    </pre>
+
+    <h2>🛡️ Propósito</h2>
+    <p>A ferramenta não coleta dados sensíveis. Seu objetivo é ajudar administradores a corrigirem falhas antes que sejam exploradas. É construção, não destruição.</p>
+
+    <h2>📜 Juramento da Ética Hacker</h2>
+    <blockquote>
+      "Com grande conhecimento, vem grande responsabilidade. Usarei minhas habilidades para proteger, nunca para prejudicar. Sou DevLS — não para quebrar, mas para construir."
+    </blockquote>
+
+    <p>🔗 Repositório oficial: <a href="https://github.com/DevLS-svg/fingerprint.py" target="_blank">DevLS-svg/fingerprint.py</a></p>
+  </div>
+</body>
+</html>

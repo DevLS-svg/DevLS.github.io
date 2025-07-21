@@ -1,0 +1,24 @@
+<!-- labs/local-ip-tracer.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>IP Tracer</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="terminal">
+    <h1>Local IP Tracer</h1>
+    <p><strong>Seu IP local (simulado):</strong></p>
+    <p id="ip">192.168.0.<span id="end">...</span></p>
+
+    <script>
+      function gerarIP() {
+        const randomSegment = Math.floor(Math.random() * 100) + 1;
+        document.getElementById("end").textContent = randomSegment;
+      }
+      window.addEventListener("load", gerarIP);
+    </script>
+  </div>
+</body>
+</html>

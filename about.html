@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sobre a DevLS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="cabecalho"></div>
+
+  <div class="terminal">
+    <h1>Sobre a DevLS</h1>
+    <p>A DevLS é uma iniciativa independente voltada à pesquisa, desenvolvimento e experimentação de tecnologia com foco em segurança, privacidade digital e automação web. Operando nas sombras, mas sempre com propósito.</p>
+  </div>
+  <script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("cabecalho").innerHTML = data;
+    });
+</script>
+<script src="script.js" defer></script>
+
+</body>
+</html>

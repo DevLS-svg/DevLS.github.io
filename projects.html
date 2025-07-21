@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projetos DevLS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="cabecalho"></div>
+
+  <div class="terminal">
+    <h1>Repositórios e Ferramentas</h1>
+    <p>Explore os principais projetos públicos mantidos pela <strong>DevLS</strong>:</p>
+
+    <ul>
+      <li>
+        <a href="https://github.com/DevLS-svg/fingerprint.py" target="_blank">
+          🛡️ fingerprint.py — Auditoria ética de headers HTTP
+        </a>
+        <p style="margin-top:0.3rem;">Ferramenta em Python que detecta práticas inseguras (como ausência de HSTS, CSP e X-Frame-Options) e gera relatório técnico em Markdown.</p>
+      </li>
+
+      <!-- Adicione mais projetos aqui no futuro -->
+    </ul>
+
+    <p>🌐 Veja todos os repositórios no GitHub: 
+      <a href="https://github.com/DevLS-svg" target="_blank">github.com/DevLS-svg</a>
+    </p>
+  </div>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("cabecalho").innerHTML = data;
+      });
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>

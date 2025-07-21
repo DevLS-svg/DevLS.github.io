@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>DevLS Labs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Cabeçalho global (menu + botão de tema) -->
+  <div id="cabecalho"></div>
+
+  <div class="terminal">
+    <h1>DevLS Labs 🧪</h1>
+    <p>Explore experiências criadas pela DevLS para teste e curiosidade técnica:</p>
+
+    <ul>
+      <li><a href="labs/canvas-fingerprint.html" target="_blank">🖼️ Canvas Fingerprint Test</a></li>
+      <li><a href="labs/user-agent-viewer.html" target="_blank">🧭 User Agent Visualizer</a></li>
+      <li><a href="labs/local-ip-tracer.html" target="_blank">🌐 IP Tracer (simulado)</a></li>
+    </ul>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Carrega o cabeçalho com menu e botão de tema
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("cabecalho").innerHTML = data;
+      });
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>

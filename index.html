@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portal DevLS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="cabecalho"></div>
+    <span class="blinking-cursor">▌</span>
+    <div class="banner-devls">
+  <p>"Código é arte. Privacidade é resistência. DevLS é presença."</p>
+</div>
+   
+  <div class="terminal">
+    <h1>~ Portal DevLS ~</h1>
+    <div id="feed">
+      <p>Carregando publicações...</p>
+    </div>
+  </div>
+  <button onclick="alternarTema()" class="modo-btn">🌗 Mudar Tema</button>
+  <script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("cabecalho").innerHTML = data;
+    });
+</script>
+<script src="script.js" defer></script>
+
+</body>
+</html>

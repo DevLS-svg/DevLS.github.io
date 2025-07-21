@@ -1,0 +1,39 @@
+<!-- labs/canvas-fingerprint.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Canvas Fingerprint</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="terminal">
+    <h1>Canvas Fingerprint</h1>
+    <canvas id="canvas" width="300" height="100"></canvas>
+    <p><strong>Fingerprint hash:</strong> <span id="hash">Gerando...</span></p>
+  </div>
+
+  <script>
+    function getFingerprint() {
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+
+      ctx.textBaseline = "top";
+      ctx.font = "16px Arial";
+      ctx.fillText("DevLS Canvas Test", 10, 10);
+      ctx.fillStyle = "rgba(100,0,200,0.8)";
+      ctx.fillRect(50, 50, 100, 30);
+
+      const dataURL = canvas.toDataURL();
+      let hash = 0;
+      for (let i = 0; i < dataURL.length; i++) {
+        hash = (hash << 5) - hash + dataURL.charCodeAt(i);
+        hash |= 0;
+      }
+      document.getElementById("hash").textContent = Math.abs(hash);
+    }
+
+    window.addEventListener("load", getFingerprint);
+  </script>
+</body>
+</html>
