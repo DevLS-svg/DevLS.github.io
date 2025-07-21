@@ -5,6 +5,10 @@ const posts = [
   {
     title: "Fingerprint: Identidade Digital Invisível",
     file: "posts/fingerprint.html"
+  },
+  {
+    title: "DevLS - A internet manual ainda respira!!",
+    file: "posts/manual-web.html"
   }
 ];
 
